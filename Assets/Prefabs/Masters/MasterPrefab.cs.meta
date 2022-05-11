@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: fdcbe759b8ee0b9408194a309a9efee4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - MainPhoto: {fileID: 21300000, guid: c34e8c51cb9f82f418cbdf4cc318cd76, type: 3}
+  - OldPhoto: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
