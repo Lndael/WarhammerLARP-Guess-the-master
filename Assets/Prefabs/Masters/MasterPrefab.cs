@@ -8,15 +8,4 @@ public class MasterPrefab : ScriptableObject
     public Sprite MainPhoto;
     public Sprite OldPhoto;
     public string Name;
-    
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

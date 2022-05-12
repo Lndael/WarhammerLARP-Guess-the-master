@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fdcbe759b8ee0b9408194a309a9efee4, type: 3}
-  m_Name: MasterData
+  m_Name: MasterData 8
   m_EditorClassIdentifier: 
   MainPhoto: {fileID: 0}
   OldPhoto: {fileID: 0}

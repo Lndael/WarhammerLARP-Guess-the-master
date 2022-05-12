@@ -23,23 +23,24 @@ public class SlideScript : MonoBehaviour
     private bool isScrolling;
    
     private float scale;
-    private List<MasterPrefab> mastersList;
-    
+    [SerializeField] private MastersData _mastersData;
     public List<GameObject> pannelsArray;
-    // Start is called before the first frame update
+
+    public int count;
+    
     void Start()
     {
-        mastersList = MastersData.MastersList;
-        panelScale = new Vector2[mastersList.Count];
+        count = _mastersData.MastersList.Count;
+
+        panelScale = new Vector2[_mastersData.MastersList.Count];
         contentRT = GetComponent<RectTransform>();
         pannelsArray = new List<GameObject>();
-        panelPos = new Vector2[mastersList.Count];
-        for (int i = 0;  i < mastersList.Count; i++)
+        panelPos = new Vector2[_mastersData.MastersList.Count];
+        for (int i = 0;  i < _mastersData.MastersList.Count; i++)
         {
             pannelsArray.Add(panelPrefab);
             pannelsArray[i] = (Instantiate(panelPrefab, transform,false));
-            pannelsArray[i].name = mastersList[i].Name;
-            pannelsArray[i].GetComponent<Image>().sprite = mastersList[i].MainPhoto;
+            pannelsArray[i].GetComponent<Image>().sprite = _mastersData.MastersList[i].MainPhoto;
             if (i == 0) continue;
             pannelsArray[i].transform.localPosition = new Vector2(pannelsArray[i-1].transform.localPosition.x + 
                                                              panelPrefab.GetComponent<RectTransform>().sizeDelta.x + panelOffset, 
@@ -57,7 +58,7 @@ public class SlideScript : MonoBehaviour
             scrollRect.inertia = false;
         }
         float nearestPos = float.MaxValue;
-        for (int i = 0; i < mastersList.Count; i++)
+        for (int i = 0; i < _mastersData.MastersList.Count; i++)
         {
             float distance = Mathf.Abs(contentRT.anchoredPosition.x - panelPos[i].x);
             if (distance < nearestPos)

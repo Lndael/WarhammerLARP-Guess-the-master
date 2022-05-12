@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: fdcbe759b8ee0b9408194a309a9efee4
+guid: 31a109d493410e744b138e45393eb84e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - MainPhoto: {instanceID: 0}
-  - OldPhoto: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

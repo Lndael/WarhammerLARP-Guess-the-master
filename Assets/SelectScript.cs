@@ -6,6 +6,8 @@ public class SelectScript : MonoBehaviour
 {
     [SerializeField] private SlideScript topPlane;
     [SerializeField] private BotScript botPlane;
+
+    private Ray myRay;
     
     // Start is called before the first frame update
     void Start()
